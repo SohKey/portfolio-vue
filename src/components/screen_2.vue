@@ -1,29 +1,87 @@
+<script setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+import { fade_down, fade_right, fade_up } from '../core/animations';
+import diplome from '../assets/certificat.png';
+import progress from '../assets/progress.png';
+import learning from '../assets/learning.png';
+
+const text = ref()
+const title = ref()
+const box1 = ref()
+const box2 = ref()
+const box3 = ref()
+
+const animations = [
+    fade_right(text, 300),
+    fade_down(title, 400),
+    fade_up(box1, 450),
+    fade_up(box2, 500),
+    fade_up(box3, 550),
+]
+
+onMounted(() => {
+    animations.forEach(animation => animation.mount())
+})
+onUnmounted(() => animations.forEach(animation => animation.unmount()))
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+</style>
+
 <template>
-    <div id="about" class="h-screen w-screen bg-gradient-to-b from-slate-800 to-neutral-900">
-        <section class="w-screen h-screen py-10 text-neutral-800 relative">
-            <h2 class="text-7xl absolute top-0 right-0 w-[35%] bg-slate-200 p-2 m-5 rounded font-title">
+    <div class="h-screen bg-gradient-to-b from-slate-800 to-neutral-900">
+        <section class="h-full py-10 text-neutral-800 relative">
+            <h2 ref="title" class="text-7xl absolute top-0 right-0 w-[35%] bg-slate-200 p-2 m-5 rounded font-title">
                 Making Websites, API's & open source solutions
             </h2>
-            <div class="hidden absolute bottom-0 h-[60%] right-0 w-[35%] bg-slate-200 p-2 m-5">
-                <h3 class="text-4xl">Formations</h3>
-                <div class="list-disc list-outside text-xl">
-                    <li>
-                        <h4>Bac Scientifique</h4>
-                        <span>Lycée Pierre du terrail [Pontcharra]</span>
-                    </li>
-                    <li>
-                        <h4>Brevet de technicien superieur</h4>
-                        <span>Lycée algoud laffemas [Valence]</span>
-                        <ul>
+
+            <div class="absolute w-full bottom-10 flex justify-center text-neutral-800">
+                <div ref="box1" class="bg-slate-200 w-72 m-5 rounded-md">
+                    <p class="h-1 w-full bg-sky-500 rounded-t-md"></p>
+                    <div class="pt-5 px-5 absolute">
+                        <h4 class="text-3xl">Scientific <br>baccalauréat</h4>
+                        <div class="flex justify-center items-center mt-5">
+                            <span>Pierre du terrail <br> high school (France)</span>
+                            <img :src="diplome" class="h-28 rounded" alt="diplome">
+                        </div>
+                    </div>
+                </div>
+                <div ref="box2" class="bg-slate-200 w-72 m-5 rounded-md">
+                    <p class="h-1 w-full bg-emerald-500 rounded-t-md"></p>
+                    <div class="pt-5 px-5">
+                        <h4 class="text-3xl inline-block">Higher 
+                            <br>|<span class="ml-20">National</span>
+                            <br>Diploma
+                        </h4>
+                        <span class="absolute top-5">[BTEC]</span>
+                        <div class="flex justify-center items-center space-x-2">
+                            <span>Algoud laffemas<br>high school (France)</span>
+                            <img :src="progress" class="h-28 rounded" alt="progress">
+                        </div>
+
+                        <div class="hidden list-disc">
                             <li>Stage 5 semaines CEA [Grenoble]</li>
                             <li>Stage 7 semaines AresRPG [Remote]</li>
-                        </ul>
-                    </li>
+                        </div>
+                    </div>
                 </div>
 
+                <div ref="box3" class="bg-slate-200 w-72 m-5 rounded-md">
+                    <p class="h-1 w-full bg-orange-500 rounded-t-md"></p>
+                    <div class="pt-5 px-5">
+                        <h4 class="text-3xl">Autodidact 
+                            <br> & <span class="ml-10">Self-Taught</span>
+                        </h4>
+                        <div class="flex mt-5 justify-center items-center">
+                            <img :src="learning" class="h-28" alt="learning">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="absolute top-0 left-0 w-[50%] h-screen flex items-center justify-center">
-                <p class="w-[60%] h-[50%] text-slate-200 text-xl">
+
+            <div class="absolute top-16 left-0 w-[60%] h-[50%] flex items-center justify-center">
+                <p ref="text" class="w-[60%] text-neutral-200 text-xl border-l p-5 md:max-2xl:w-[80%]">
                     Years of programming experience that can serve you.
                     Highly skilled CTO with proven field experience, I write Node.js and GraphQL APIs to provide tech
                     companies with an efficient and outstanding growth. Through a self-taught background, I spent
@@ -40,6 +98,3 @@
         </section>
     </div>
 </template>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-</style>

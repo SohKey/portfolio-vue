@@ -1,13 +1,35 @@
+<script setup>
+import { onMounted, onUnmounted, ref } from 'vue';
+import { appear_left, fade_up } from '../core/animations';
+
+const icons = ref()
+const profilePic = ref()
+const footer = ref()
+
+const animations = [ 
+appear_left(icons, 300),
+fade_up(footer, 800),
+fade_up(profilePic, 300),
+]
+
+onMounted(() => {
+  animations.forEach(animation => animation.mount())
+})
+onUnmounted(() => animations.forEach(animation => animation.unmount()))
+
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 </style> 
+
 <template>
-  <div class="h-screen w-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron flex flex-col">
+  <div class="h-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron flex flex-col">
     <div class="flex h-[90%]">
-      <section class="w-[50%] space-y-5 flex flex-col justify-center items-center">
-        <img class="h-[50%] rounded-full hover:animate-[profilePicture_3s_ease-in-out_infinite]" src="../assets/CyberPP.png" alt="">
+      <section ref="profilePic" class="w-[50%] space-y-5 flex flex-col justify-center items-center">
+        <img class="h-[40%] rounded-full" src="../assets/CyberPP.png" alt="">
         <h3 class="text-slate-200">Contact & Curriculum Vitae 💼</h3>
       </section>
       <section class="text-slate-200 w-full flex flex-col justify-center">
@@ -21,54 +43,54 @@
         </div>
       </section>
       <section class="flex items-center justify-center">
-        <div class="space-x-5 mr-20 border-r-2 pr-3 animate-[appear_2s_ease-in-out]">
+        <div ref="icons" class="function-based-values-demo el space-x-5 mr-20 border-r-2 pr-3">
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="javascript" width="40" height="40" />
+              alt="javascript" height="40" />
           </a>
           <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript" width="40" height="40" />
+              alt="typescript" height="40" />
           </a>
           <a href="https://angular.io" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40" />
+            <img
+              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" height="40" />
           </a>
           <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-              alt="vuejs" width="40" height="40" />
+              alt="vuejs" height="40" />
           </a>
           <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40"
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind"
               height="40" />
           </a>
           <a href="https://www.php.net" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php"
-              width="40" height="40" />
+               height="40" />
           </a>
           <a href="https://www.java.com" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-              width="40" height="40" />
+               height="40" />
           </a>
           <a href="https://www.python.org" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
+            <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
               alt="python" width="40" height="40" />
           </a>
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-            <img class="animate-[iconAppear_2s_ease-in-out] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-              src="https://www.vectorlogo.zone/loghover:bg-slate-200os/git-scm/git-scm-icon.svg" alt="git" width="40" height="40" />
+            <img
+              src="https://www.vectorlogo.zone/loghover:bg-slate-200os/git-scm/git-scm-icon.svg" alt="git" height="40" />
           </a>
         </div>
       </section>
     </div>
-    <footer class="flex justify-center items-center text-slate-200">
+    <footer ref="footer" class="flex justify-center items-center text-slate-200">
       <nav class="w-fit border-2 rounded-full">
         <ul class="flex text-xl">
           <a class="cursor-pointer p-5 rounded-l-full hover:bg-cyber-cadre bg-left-top bg-repeat-round">My portfolio</a>
@@ -78,7 +100,6 @@
       </nav>
     </footer>
   </div>
-
 </template>
 
 <script>

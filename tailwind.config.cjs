@@ -7,6 +7,7 @@ module.exports = {
         'cyber': "url('/src/assets/cyberpunkBG-car.png')",
         'cyber-bulding': "url('/src/assets/cyberpunk-building.png')",
         'cyber-cadre': "url('/src/assets/cyberpunkBG.png')",
+        'texto': "url('/src/assets/texto.jpg')",
       }
     },
     fontFamily: {
@@ -28,21 +29,24 @@ module.exports = {
       },
       iconAppear: {
         '0%': { 
-          transform: 'translate(0px, 1000px)',
-          height: '0px'
+          transform: 'translate(0px, -1000px)',
+          height: '0'
         },
         '90%': { 
           transform: 'rotate(30deg)', 
         },
         '100%': { 
           transform: 'translate(0px)',
-          height: '40px'
+          height: '100%'
         },
       },
       profilePicture: {
-        '100%': {
+        '0%': {
           transform: 'rotate(180deg)',
-          height: '0%'
+          height: '0'
+        },
+        '100%': {
+          height: '100'
         }
       }
     }

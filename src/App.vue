@@ -5,7 +5,9 @@ import Portfolio from './components/screen_3.vue'
 </script>
 
 <template>
-  <Home msg="Thomas Rodriguez" />
-  <About msg="About Me" />
-  <Portfolio msg="Portfolio" />
+  <div class="w-full">
+    <Home msg="Thomas Rodriguez" />
+    <About msg="About Me" />
+    <Portfolio msg="Portfolio" /> 
+  </div>
 </template>
