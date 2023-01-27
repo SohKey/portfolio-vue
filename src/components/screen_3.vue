@@ -59,7 +59,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
             </div>
         </section>
         <section class="w-full flex justify-center items-center mt-10">
-            <p class="bg-neutral-100 text-neutral-800 rounded w-fit p-2 mb-5">You can check all my projects <a class="text-sky-700 font-bold" href="https://github.com/SohKey?tab=repositories">here</a> !</p>
+            <p class="bg-neutral-100 text-neutral-800 rounded w-fit p-2 my-5">You can check all my projects <a class="text-sky-700 font-bold" href="https://github.com/SohKey?tab=repositories">here</a> !</p>
         </section>
     </div>
 </template>

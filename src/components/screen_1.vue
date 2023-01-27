@@ -26,7 +26,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </style> 
 
 <template>
-  <div class="h-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron">
+  <div class="bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[30vh] sm:h-[40vh] md:h-[60vh] lg:h-screen">
     <div class="w-full h-full absolute">
       <section ref="profilePic" class="w-fit space-y-5 flex flex-col absolute top-48 left-0 justify-center items-center">
         <img class="xl:w-[60%] md:w-[50%] rounded-full" src="../assets/CyberPP.png" alt="">
@@ -42,50 +42,50 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 
         </div>
       </section>
-      <section class="flex items-center justify-center absolute top-20 right-0 xl:block md:hidden">
-        <div ref="icons" class="space-x-5 mr-20 border-r-2 pr-3">
+      <section class="h-full items-center justify-center absolute right-0 xl:flex md:hidden">
+        <div ref="icons" class="space-x-5 mr-10 border-r-2 pr-3">
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="javascript" height="40" />
+              alt="javascript" width="40" />
           </a>
           <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript" height="40" />
+              alt="typescript" width="40" />
           </a>
           <a href="https://angular.io" target="_blank" rel="noreferrer">
             <img
-              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" height="40" />
+              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" />
           </a>
           <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-              alt="vuejs" height="40" />
+              alt="vuejs" width="40" />
           </a>
           <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
             <img
               src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind"
-              height="40" />
+              width="40" />
           </a>
           <a href="https://www.php.net" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php"
-               height="40" />
+              width="40" />
           </a>
           <a href="https://www.java.com" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-               height="40" />
+              width="40" />
           </a>
           <a href="https://www.python.org" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-              alt="python" width="40" height="40" />
+              alt="python" width="40" />
           </a>
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
             <img
-              src="https://www.vectorlogo.zone/loghover:bg-slate-200os/git-scm/git-scm-icon.svg" alt="git" height="40" />
+              src="https://git-scm.com/images/logo@2x.png" alt="git" width="40" />
           </a>
         </div>
       </section>
