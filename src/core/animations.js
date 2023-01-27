@@ -2,7 +2,7 @@ import animate from 'animejs/lib/anime.es.js';
 
 export const anime =
   options =>
-  (ref, delay = 0, once = false) => {
+  (ref, delay = 0) => {
     const memory = {
       trigerred: false,
       observer: null,
@@ -11,7 +11,7 @@ export const anime =
       mount: () => {
         memory.observer = new IntersectionObserver(
           ([entry]) => {
-            if(once && memory.trigerred) return
+            if(memory.trigerred) return
             if (entry.isIntersecting) {
               memory.trigerred = true
               animate({

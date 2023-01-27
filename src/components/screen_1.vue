@@ -93,9 +93,9 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
     <footer ref="footer" class="flex justify-center items-center text-slate-200 absolute bottom-5 inset-x-0">
       <nav class="w-fit border-2 rounded-full">
         <ul class="flex text-xl">
-          <a class="cursor-pointer p-5 rounded-l-full hover:bg-cyber-cadre bg-left-top bg-repeat-round">My portfolio</a>
-          <a href="#about" class="cursor-pointer p-5 hover:bg-cyber bg-repeat-round">About me</a>
-          <a class="cursor-pointer p-5 rounded-r-full hover:bg-cyber-bulding bg-repeat-round">Github & Tools</a>
+          <a href="#portfolio" class="cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
+          <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
+          <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifs</a>
         </ul>
       </nav>
     </footer>

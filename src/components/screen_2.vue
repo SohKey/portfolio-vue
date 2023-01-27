@@ -30,7 +30,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </style>
 
 <template>
-    <div class="w-full bg-cyber bg-repeat-round bg-fixed bg-cover md:h-screen sm:h-[50vh]">
+    <div id="about" class="w-full bg-cyber bg-repeat-round bg-fixed bg-cover lg:h-screen flex flex-col md:justify-center md:h-[60vh]">
         <div class="h-full bg-gradient-to-b from-slate-800 to-neutral-900 clip-2">
             <section class="h-full py-10 text-neutral-800 relative space-y-10">
                 <div class="flex flex-col md:flex-row">

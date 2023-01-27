@@ -28,9 +28,9 @@ const animations = [
     fade_right(box2, 500),
     fade_right(box3, 550),
     fade_right(box4, 600),
-    round_num(244)(contrib, 650, true),
-    round_num(18)(pr, 700, true),
-    round_num(150)(commits, 750, true),
+    round_num(244)(contrib, 650),
+    round_num(18)(pr, 700),
+    round_num(150)(commits, 750),
 ]
 
 onMounted(() => {
@@ -40,7 +40,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <template>
-    <div class="h-screen w-full bg-cyber bg-repeat-round bg-fixed bg-cover">
+    <div id="github" class="h-screen w-full bg-cyber bg-repeat-round bg-fixed bg-cover">
         <div class="w-full bg-gradient-to-b from-neutral-800 to-slate-900 flex justify-center clip-1 absolute md:h-full sm:h-[80vh]">
             <section class="absolute h-full w-full flex justify-center items-center">
                 <img ref="circle1" class="absolute" :src="circle" alt="">

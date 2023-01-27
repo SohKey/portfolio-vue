@@ -24,7 +24,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <template>
-    <div class="h-full w-full bg-cyber bg-repeat-round bg-fixed bg-cover text-neutral-200">
+    <div id="portfolio" class="h-full w-full bg-cyber bg-repeat-round bg-fixed bg-cover text-neutral-200">
         <section class="h-36 w-full flex justify-center items-center font-orbitron">
             <h1 class="mx-20 text-6xl">Personal Projects</h1>
         </section>
