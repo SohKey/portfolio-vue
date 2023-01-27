@@ -26,14 +26,14 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </style> 
 
 <template>
-  <div class="h-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron flex flex-col">
-    <div class="flex h-[90%]">
-      <section ref="profilePic" class="w-[50%] space-y-5 flex flex-col justify-center items-center">
-        <img class="h-[40%] rounded-full" src="../assets/CyberPP.png" alt="">
-        <h3 class="text-slate-200">Contact & Curriculum Vitae 💼</h3>
+  <div class="h-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron">
+    <div class="w-full h-full absolute">
+      <section ref="profilePic" class="w-fit space-y-5 flex flex-col absolute top-48 left-0 justify-center items-center">
+        <img class="xl:w-[60%] md:w-[50%] rounded-full" src="../assets/CyberPP.png" alt="">
+        <h3 class="text-slate-200 w-fit">Contact & Curriculum Vitae 💼</h3>
       </section>
-      <section class="text-slate-200 w-full flex flex-col justify-center">
-        <div>
+      <section class="absolute top-80 left-96 ml-40 text-slate-200 xl:w-full xl:w-[50%]">
+        <div class="flex flex-col">
           <v-typical :class="'text-6xl font-orbitron mb-5'"
             :steps="['Hello !', 1000, `Hello, I'm Thomas Rodriguez`, 4000]" :wrapper="'h1'"></v-typical>
           <v-typical class="bg-slate-200 text-slate-800 px-2 mt-5 rounded w-fit text-center"
@@ -42,8 +42,8 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 
         </div>
       </section>
-      <section class="flex items-center justify-center">
-        <div ref="icons" class="function-based-values-demo el space-x-5 mr-20 border-r-2 pr-3">
+      <section class="flex items-center justify-center absolute top-20 right-0 xl:block md:hidden">
+        <div ref="icons" class="space-x-5 mr-20 border-r-2 pr-3">
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
@@ -90,7 +90,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
         </div>
       </section>
     </div>
-    <footer ref="footer" class="flex justify-center items-center text-slate-200">
+    <footer ref="footer" class="flex justify-center items-center text-slate-200 absolute bottom-5 inset-x-0">
       <nav class="w-fit border-2 rounded-full">
         <ul class="flex text-xl">
           <a class="cursor-pointer p-5 rounded-l-full hover:bg-cyber-cadre bg-left-top bg-repeat-round">My portfolio</a>
