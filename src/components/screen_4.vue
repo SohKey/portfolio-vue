@@ -40,107 +40,85 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <template>
-    <div id="github" class="h-screen w-full bg-cyber bg-repeat-round bg-fixed bg-cover">
-        <div class="w-full bg-gradient-to-b from-neutral-800 to-slate-900 flex justify-center clip-1 absolute md:h-full sm:h-[80vh]">
-            <section class="absolute h-full w-full flex justify-center items-center">
+    <div id="github"
+        class="w-full lg:h-full 2xl:h-screen bg-gradient-to-b from-neutral-800 to-slate-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover">
+        <div class="w-full h-full bg-gradient-to-b from-neutral-800 to-slate-900 clip-1">
+            <section class="absolute h-[60vh] md:h-full w-full flex justify-center items-center">
                 <img ref="circle1" class="absolute" :src="circle" alt="">
-                <img class="absolute animate-[bounce_1s_ease-in-out_infinite] invert" width="125" :src="levelUp"
-                alt="">
+                <img class="absolute animate-[bounce_1s_ease-in-out_infinite] invert" width="125" :src="levelUp" alt="">
                 <img ref="circle2" class="absolute" :src="circle" alt="">
             </section>
-            <section class="h-full w-full absolute top-0 right-0">
-                <div class="absolute right-5 top-10">
-                    <div class="mt-10 bg-neutral-100 w-fit rounded-md text-neutral-800 text-xl flex space-x-5 p-5 font-orbitron ">
-                    <div class="flex items-center space-x-2">
-                        <img width="40" :src="contribIcon" alt="">
-                        <span class="text-2xl font-bold" ref="contrib"></span>+
-                        <p>Contributions</p>
+            <section class="h-full w-full pt-20 pl-5 flex flex-col 2xl:flex-row justify-center">
+                <div class="flex flex-col">
+                    <a  href="https://github.com/SohKey"
+                        class="bg-neutral-100 w-fit rounded-md text-neutral-800 text-xl flex p-5 font-orbitron space-x-2 z-10 cursor-pointer hover:bg-neutral-300">
+                        <div class="flex items-center space-x-2">
+                            <img width="40" :src="contribIcon" alt="">
+                            <span class="text-2xl font-bold" ref="contrib"></span>+
+                            <p>Contributions</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img width="40" :src="prIcon" alt="">
+                            <span class="text-2xl font-bold" ref="pr"></span>+
+                            <p>Pull Requests</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <img width="40" :src="commitIcon" alt="">
+                            <span class="text-2xl font-bold" ref="commits"></span>+
+                            <p>Commits</p>
+                        </div>
+                    </a>
+                    <div class="mt-20 bg-neutral-200 p-2 rounded w-fit z-10">
+                        <h1 class="text-6xl text-neutral-900 font-title">Github <br> & Certifications</h1>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <img width="40" :src="prIcon" alt="">
-                        <span class="text-2xl font-bold" ref="pr"></span>+
-                        <p>Pull Requests</p>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <img width="40" :src="commitIcon" alt="">
-                        <span class="text-2xl font-bold" ref="commits"></span>+
-                        <p>Commits</p>
-                    </div>
+                    <p ref="text" class="text-3xl lg:text-xl text-neutral-100 mt-10 w-full lg:w-[30%] 2xl:w-[40%]">
+                        I am a fullstack JavaScript developer with a wide range of skills and experience, including
+                        expertise in JavaScript (Vue and Angular frameworks), Python, or Java. I invite you to visit my GitHub profile,
+                        where you will find a variety of impressive projects that demonstrate my abilities and showcase
+                        my dedication to creating high-quality, innovative software. Whether you're looking for
+                        inspiration for your own projects or simply want to see what I'm capable of, my GitHub is the
+                        perfect place to start. 
+                    </p>
                 </div>
-                <div class="mt-10 bg-neutral-200 p-2 rounded w-fit absolute right-0">
-                    <h1 class="text-6xl text-neutral-900 font-title">Github</h1>
-                </div>
-                </div>
-                <p ref="text" class="text-xl text-neutral-100 p-5 absolute right-0 bottom-10 w-[30%] md:max-2xl:hidden">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, libero asperiores expedita
-                    voluptas
-                    accusamus, sint nemo atque fugit amet blanditiis quas quae, delectus suscipit omnis! Accusantium
-                    sunt
-                    quis doloribus culpa.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, libero asperiores expedita
-                    voluptas
-                    accusamus, sint nemo atque fugit amet blanditiis quas quae, delectus suscipit omnis! Accusantium
-                    sunt
-                    quis doloribus culpa.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, libero asperiores expedita
-                    voluptas
-                    accusamus, sint nemo atque fugit amet blanditiis quas quae, delectus suscipit omnis! Accusantium
-                    sunt
-                    quis doloribus culpa.
-                </p>
-            </section>
-            <section class="h-full w-full absolute">
-                <div class="absolute left-0 xl:top-28 m-5 md:bottom-0">
-                    <div class="bg-neutral-200 p-2 rounded w-fit">
-                        <h1 class="text-6xl text-neutral-900 font-title">Certifications</h1>
+                <div
+                    class="2xl:w-full mt-80 mb-20 lg:mt-10 flex flex-wrap 2xl:flex-col 2xl:space-y-5 lg:mr-5 justify-center">
+                    <div ref="box1"
+                        class="bg-slate-200 rounded-xl border-2 border-neutral-200 w-[40%] 2xl:w-full mb-2 2xl:mb-0">
+                        <div class="flex bg-slate-700 rounded-xl items-center">
+                            <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
+                            <span class="w-full text-neutral-100 p-2">
+                                <h3 class="text-2xl">Cybersecurity Essentials</h3>
+                            </span>
+                            <img width="60" :src="certif" alt="">
+                        </div>
                     </div>
-                    <div class="flex flex-col mt-10 justify-center items-center">
-                        <div class="w-full flex xl:flex-col space-y-5 mx-5 md:flex-wrap">
-                            <div ref="box1"
-                                class="mt-5 bg-slate-200 rounded-xl border-2 border-neutral-200 xl:w-full md:w-fit md:mr-5">
-                                <div class="flex bg-slate-700 rounded-xl items-center">
-                                    <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
-                                    <span class="w-full text-neutral-100 p-2">
-                                        <h3 class="text-2xl">Cybersecurity Essentials</h3>
-                                        <p>Issue date: May 2022</p>
-                                    </span>
-                                    <img width="60" :src="certif" alt="">
-                                </div>
-                            </div>
-                            <div ref="box2"
-                                class="bg-slate-200 rounded-xl border-2 border-neutral-200 xl:w-full md:w-fit">
-                                <div class="flex bg-slate-700 rounded-xl items-center">
-                                    <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
-                                    <span class="w-full text-neutral-100 p-2">
-                                        <h3 class="text-2xl"> JavaScript Essentials</h3>
-                                        <p>Issue date: September 2022</p>
-                                    </span>
-                                    <img width="60" :src="certif" alt="">
-                                </div>
-                            </div>
-                            <div ref="box3"
-                                class="bg-slate-200 rounded-xl border-2 border-neutral-200 xl:w-full md:w-fit md:mr-5">
-                                <div class="flex bg-slate-700 rounded-xl items-center">
-                                    <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
-                                    <span class="w-full text-neutral-100 p-2">
-                                        <h3 class="text-2xl">CCNAv7: Introduction to Networks</h3>
-                                        <p>Issue date: January 2022</p>
-                                    </span>
-                                    <img width="60" :src="certif" alt="">
-                                </div>
-                            </div>
-                            <div ref="box4"
-                                class="bg-slate-200 rounded-xl border-2 border-neutral-200 xl:w-full md:w-fit">
-                                <div class="flex bg-slate-700 rounded-xl items-center">
-                                    <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
-                                    <span class="w-full text-neutral-100 p-2">
-                                        <h3 class="text-2xl">DevNet Associate</h3>
-                                        <p>Issue date: April 2022</p>
-                                    </span>
-                                    <img width="60" :src="certif" alt="">
-                                </div>
-                            </div>
-
+                    <div ref="box2"
+                        class="bg-slate-200 rounded-xl border-2 border-neutral-200 w-[40%] 2xl:w-full ml-2 mb-2 2xl:ml-0">
+                        <div class="flex bg-slate-700 rounded-xl items-center">
+                            <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
+                            <span class="w-full text-neutral-100 p-2">
+                                <h3 class="text-2xl"> JavaScript Essentials</h3>
+                            </span>
+                            <img width="60" :src="certif" alt="">
+                        </div>
+                    </div>
+                    <div ref="box3" class="bg-slate-200 rounded-xl border-2 border-neutral-200 w-[40%] 2xl:w-full">
+                        <div class="flex bg-slate-700 rounded-xl items-center">
+                            <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
+                            <span class="w-full text-neutral-100 p-2">
+                                <h3 class="text-2xl">CCNAv7: Introduction to Networks</h3>
+                            </span>
+                            <img width="60" :src="certif" alt="">
+                        </div>
+                    </div>
+                    <div ref="box4"
+                        class="bg-slate-200 rounded-xl border-2 border-neutral-200 w-[40%] 2xl:w-full ml-2 2xl:ml-0">
+                        <div class="flex bg-slate-700 rounded-xl items-center">
+                            <img class="rounded-tl-xl rounded-bl-xl h-28" :src="cisco" alt="">
+                            <span class="w-full text-neutral-100 p-2">
+                                <h3 class="text-2xl">DevNet Associate</h3>
+                            </span>
+                            <img width="60" :src="certif" alt="">
                         </div>
                     </div>
                 </div>

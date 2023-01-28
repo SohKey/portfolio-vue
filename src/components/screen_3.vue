@@ -4,6 +4,7 @@ import { fade_left, fade_right } from '../core/animations';
 import pokeApp from '../assets/pokeApp.png';
 import aresrpg from '../assets/aresrpg.png';
 import pokeApi from '../assets/poke-api.png';
+import giveway from '../assets/giveway.png';
 
 const box1 = ref()
 const box2 = ref()
@@ -24,7 +25,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <template>
-    <div id="portfolio" class="h-full w-full bg-cyber bg-repeat-round bg-fixed bg-cover text-neutral-200">
+    <div id="portfolio" class="h-full w-full bg-gradient-to-b from-slate-800 to-neutral-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover text-neutral-200">
         <section class="h-36 w-full flex justify-center items-center font-orbitron">
             <h1 class="mx-20 text-6xl">Personal Projects</h1>
         </section>
@@ -52,8 +53,10 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                         </a>
                     </div>
                     <div ref="box4" class="shadow-xl shadow-slate-800 space-y-1">
-                        <p>Comming out soon...</p>
-                        <img :src="pokeApi" alt="">
+                        <a href="https://github.com/SohKey/Giveaway-BOT">
+                            <p>Python BOT finding NFT giveways</p>
+                            <img :src="giveway" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
