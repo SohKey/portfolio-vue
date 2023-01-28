@@ -74,7 +74,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                     <p ref="text" class="text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100 mt-10 w-[75%] lg:w-[30%] 2xl:w-[40%]">
                         I am a fullstack JavaScript developer with a wide range of skills and experience, including
                         expertise in Node.js, Vue.js, Angular, Python, or Java. I invite you to visit my GitHub profile,
-                        where you will find a variety of impressive projects that demonstrate my abilities and showcase
+                        where you will find a variety of projects that demonstrate my abilities and showcase
                         my dedication to creating high-quality, innovative software. Whether you're looking for
                         inspiration for your own projects or simply want to see what I'm capable of, my GitHub is the
                         perfect place to start. 
