@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import home from './views/home.vue'
+import p404 from './views/404.vue'
 
 export default createRouter({
   history: createWebHistory(),
@@ -11,7 +12,7 @@ export default createRouter({
     },
     {
       path: '/:catchAll(.*)',
-      redirect: { path: '/' }
+      component: p404,
     },
   ],
 })
