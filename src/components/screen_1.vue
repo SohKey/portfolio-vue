@@ -20,17 +20,16 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 </style> 
 
 <template>
-  <div class="bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[30vh] sm:h-[40vh] md:h-[60vh] lg:h-screen">
+  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[40vh] lg:h-[80vh] xl:h-screen">
     <div class="w-full h-full absolute">
       <section ref="profilePic" class="w-fit space-y-5 flex flex-col absolute top-48 left-0 justify-center items-center">
         <img class="xl:w-[60%] md:w-[50%] rounded-full" src="../assets/CyberPP.png" alt="">
-        <h3 class="text-slate-200 w-fit">Contact & Curriculum Vitae 💼</h3>
+        <h3 class="text-slate-200 w-fit cursor-pointer border-slate-100 border rounded p-1"><a href="mailto:sohkey.fetch@gmail.com">Contact</a> 💼</h3>
       </section>
       <section class="absolute top-80 left-96 ml-40 text-slate-200 xl:w-full xl:w-[50%]">
         <div class="flex flex-col">
@@ -90,9 +89,9 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
         </div>
       </section>
     </div>
-    <footer ref="footer" class="flex justify-center items-center text-slate-200 absolute bottom-5 inset-x-0">
+    <footer ref="footer" class="flex justify-center items-center text-slate-200 xl:absolute bottom-5 inset-x-0">
       <nav class="w-fit border-2 rounded-full">
-        <ul class="flex text-xl">
+        <ul class="flex text-4xl xl:text-xl">
           <a href="#portfolio" class="cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
           <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
           <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifs</a>
