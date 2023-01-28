@@ -71,9 +71,9 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                     <div class="mt-20 bg-neutral-200 p-2 rounded w-fit z-10">
                         <h1 class="text-6xl text-neutral-900 font-title">Github <br> & Certifications</h1>
                     </div>
-                    <p ref="text" class="text-3xl lg:text-xl text-neutral-100 mt-10 w-full lg:w-[30%] 2xl:w-[40%]">
+                    <p ref="text" class="text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100 mt-10 w-[75%] lg:w-[30%] 2xl:w-[40%]">
                         I am a fullstack JavaScript developer with a wide range of skills and experience, including
-                        expertise in JavaScript (Vue and Angular frameworks), Python, or Java. I invite you to visit my GitHub profile,
+                        expertise in Node.js, Vue.js, Angular, Python, or Java. I invite you to visit my GitHub profile,
                         where you will find a variety of impressive projects that demonstrate my abilities and showcase
                         my dedication to creating high-quality, innovative software. Whether you're looking for
                         inspiration for your own projects or simply want to see what I'm capable of, my GitHub is the
