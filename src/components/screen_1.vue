@@ -20,20 +20,19 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rubik+80s+Fade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 </style> 
 
 <template>
-  <div class="h-screen bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron flex flex-col">
-    <div class="flex h-[90%]">
-      <section ref="profilePic" class="w-[50%] space-y-5 flex flex-col justify-center items-center">
-        <img class="h-[40%] rounded-full" src="../assets/CyberPP.png" alt="">
-        <h3 class="text-slate-200">Contact & Curriculum Vitae 💼</h3>
+  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[40vh] lg:h-[80vh] xl:h-screen">
+    <div class="w-full h-full absolute">
+      <section ref="profilePic" class="w-fit space-y-5 flex flex-col absolute top-48 left-0 justify-center items-center">
+        <img class="xl:w-[60%] md:w-[50%] rounded-full" src="../assets/CyberPP.png" alt="">
+        <h3 class="text-slate-200 w-fit cursor-pointer border-slate-100 border rounded p-1"><a href="mailto:sohkey.fetch@gmail.com">Contact</a> 💼</h3>
       </section>
-      <section class="text-slate-200 w-full flex flex-col justify-center">
-        <div>
+      <section class="absolute top-80 left-96 ml-40 text-slate-200 xl:w-full xl:w-[50%]">
+        <div class="flex flex-col">
           <v-typical :class="'text-6xl font-orbitron mb-5'"
             :steps="['Hello !', 1000, `Hello, I'm Thomas Rodriguez`, 4000]" :wrapper="'h1'"></v-typical>
           <v-typical class="bg-slate-200 text-slate-800 px-2 mt-5 rounded w-fit text-center"
@@ -42,60 +41,60 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 
         </div>
       </section>
-      <section class="flex items-center justify-center">
-        <div ref="icons" class="function-based-values-demo el space-x-5 mr-20 border-r-2 pr-3">
+      <section class="h-full items-center justify-center absolute right-0 xl:flex md:hidden">
+        <div ref="icons" class="space-x-5 mr-10 border-r-2 pr-3">
           <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              alt="javascript" height="40" />
+              alt="javascript" width="40" />
           </a>
           <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript" height="40" />
+              alt="typescript" width="40" />
           </a>
           <a href="https://angular.io" target="_blank" rel="noreferrer">
             <img
-              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" height="40" />
+              src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" />
           </a>
           <a href="https://vuejs.org/" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
-              alt="vuejs" height="40" />
+              alt="vuejs" width="40" />
           </a>
           <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
             <img
               src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind"
-              height="40" />
+              width="40" />
           </a>
           <a href="https://www.php.net" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php"
-               height="40" />
+              width="40" />
           </a>
           <a href="https://www.java.com" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java"
-               height="40" />
+              width="40" />
           </a>
           <a href="https://www.python.org" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-              alt="python" width="40" height="40" />
+              alt="python" width="40" />
           </a>
           <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
             <img
-              src="https://www.vectorlogo.zone/loghover:bg-slate-200os/git-scm/git-scm-icon.svg" alt="git" height="40" />
+              src="https://git-scm.com/images/logo@2x.png" alt="git" width="40" />
           </a>
         </div>
       </section>
     </div>
-    <footer ref="footer" class="flex justify-center items-center text-slate-200">
+    <footer ref="footer" class="flex justify-center items-center text-slate-200 xl:absolute bottom-5 inset-x-0">
       <nav class="w-fit border-2 rounded-full">
-        <ul class="flex text-xl">
-          <a class="cursor-pointer p-5 rounded-l-full hover:bg-cyber-cadre bg-left-top bg-repeat-round">My portfolio</a>
-          <a href="#about" class="cursor-pointer p-5 hover:bg-cyber bg-repeat-round">About me</a>
-          <a class="cursor-pointer p-5 rounded-r-full hover:bg-cyber-bulding bg-repeat-round">Github & Tools</a>
+        <ul class="flex text-4xl xl:text-xl">
+          <a href="#portfolio" class="cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
+          <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
+          <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifs</a>
         </ul>
       </nav>
     </footer>

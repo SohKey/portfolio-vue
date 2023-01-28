@@ -11,6 +11,7 @@ export const anime =
       mount: () => {
         memory.observer = new IntersectionObserver(
           ([entry]) => {
+            if(memory.trigerred) return
             if (entry.isIntersecting) {
               memory.trigerred = true
               animate({
@@ -51,5 +52,23 @@ export const appear_right = anime({ translateX: ['-30%', 0] })
 export const appear_left = anime({ translateX: ['30%', 0] })
 export const appear_top = anime({ translateY: ['-30%', 0] })
 export const appear_bot = anime({ translateY: ['30%', 0] })
-export const rotate_in = anime({ rotate: ['-30deg', 0] })
+
+export const rotate_in = anime({ 
+  rotate: ['-360deg', '180deg'],
+  duration: 100000,
+  easing: 'spring(150, 10, 10, 0)',
+  loop: true
+})
+export const rotate_out = anime({ 
+  rotate: ['360deg', '0deg'],
+  duration: 100000,
+  easing: 'spring(150, 10, 10, 0)',
+  loop: true
+})
 export const fade_in = anime({ easing: 'easeInCubic' })
+
+export const round_num = (num) => anime({
+  innerHTML: [0, num],
+  easing: 'linear',
+  round: 10
+})

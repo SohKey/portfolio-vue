@@ -5,9 +5,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'cyber': "url('/src/assets/cyberpunkBG-car.png')",
-        'cyber-bulding': "url('/src/assets/cyberpunk-building.png')",
-        'cyber-cadre': "url('/src/assets/cyberpunkBG.png')",
-        'texto': "url('/src/assets/texto.jpg')",
       }
     },
     fontFamily: {
@@ -19,36 +16,16 @@ module.exports = {
       
     },
     keyframes: {
-      wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' },
-      },
-      appear: {
-        '0%': { transform: 'translate(100px)'},
-        '100%': { transform: 'translate(0px)'},
-      },
-      iconAppear: {
-        '0%': { 
-          transform: 'translate(0px, -1000px)',
-          height: '0'
+      bounce: {
+        '0%, 100%': {
+          'transform': 'translateY(-15%)',
+          'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
         },
-        '90%': { 
-          transform: 'rotate(30deg)', 
-        },
-        '100%': { 
-          transform: 'translate(0px)',
-          height: '100%'
-        },
-      },
-      profilePicture: {
-        '0%': {
-          transform: 'rotate(180deg)',
-          height: '0'
-        },
-        '100%': {
-          height: '100'
+        '50%': {
+          'transform': 'translateY(0)',
+          'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
         }
-      }
+      },
     }
   },
   plugins: [],
