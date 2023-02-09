@@ -25,7 +25,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 </style> 
 
 <template>
-  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[40vh] lg:h-[80vh] xl:h-screen">
+  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[40vh] md:h-[50vh] lg:h-[80vh] xl:h-screen">
     <div class="w-full h-full absolute">
       <section ref="profilePic" class="w-fit space-y-5 flex flex-col absolute top-48 left-0 justify-center items-center">
         <img class="xl:w-[60%] md:w-[50%] rounded-full" src="../assets/CyberPP.png" alt="">
