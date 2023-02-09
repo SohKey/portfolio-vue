@@ -1,0 +1,16 @@
+{
+  "name": "Thomas' Portfolio",
+  "short_name": "Thomas'...",
+  "icons": [
+    {
+      "src": "/CyberPP.png?v=1",
+      "sizes": "584x584",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#212121",
+  "background_color": "#212121",
+  "start_url": "https://portfolio.sohkey.eu",
+  "display": "standalone",
+  "orientation": "portrait"
+}
