@@ -64,11 +64,11 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                 </div>
 
                 <div class="flex flex-col 2xl:flex-row mt-20">
-                    <div class="w-full z-10">
+                    <div class="w-full z-10 flex flex-col space-y-10">
                         <h1 class="bg-neutral-200 p-2 rounded text-6xl text-neutral-900 font-title w-fit">Github
                             <br> &
                             Certifications</h1>
-                        <p ref="text" class="text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100 mt-10">
+                        <p ref="text" class="text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100">
                             I am a fullstack JavaScript developer with a wide range of skills and experience, including
                             expertise in Node.js, Vue.js, Angular, Python, or Java. I invite you to visit my GitHub
                             profile,
@@ -78,6 +78,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                             the
                             perfect place to start.
                         </p>
+                        <a href="https://github.com/SohKey" class="text-3xl text-neutral-800 bg-gradient-to-bl from-neutral-100 to-neutral-400 p-2 rounded-md w-fit hover:bg-gradient-to-br">Github</a>
                     </div>
                     <div class="w-full h-[20vh] lg:h-[28vh] 2xl:hidden"></div>
 
