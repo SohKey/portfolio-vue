@@ -68,7 +68,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                         <h1 class="bg-neutral-200 p-2 rounded text-6xl text-neutral-900 font-title w-fit">Github
                             <br> &
                             Certifications</h1>
-                        <p ref="text" class="text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100">
+                        <p ref="text" class="font-mpro text-left leading-8 text-3xl border-l-2 pl-5 lg:text-xl text-neutral-100">
                             I am a fullstack JavaScript developer with a wide range of skills and experience, including
                             expertise in Node.js, Vue.js, Angular, Python, or Java. I invite you to visit my GitHub
                             profile,

@@ -32,7 +32,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
             <section class="h-full py-10 text-neutral-800 relative space-y-10">
                 <div class="flex flex-col md:flex-row">
                     <div class="w-[60%] h-[50%] flex items-center justify-center">
-                        <p ref="text" class="w-[60%] text-neutral-200 text-xl border-l p-5 md:max-2xl:w-[80%]">
+                        <p ref="text" class="font-mpro text-left leading-8 w-[60%] text-neutral-200 text-xl border-l p-5 md:max-2xl:w-[80%]">
                             As a student of informatic development, I have a strong foundation in programming and
                             software engineering. I have experience building APIs, websites, and working on open-source
                             projects, which has allowed me to develop a diverse set of skills and a deep understanding
