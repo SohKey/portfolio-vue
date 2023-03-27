@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import { round_num, fade_up } from "../core/animations";
+import { round_num, fade_up, fade_left } from "../core/animations";
 import cyber from "../assets/hacking.png";
 import js from "../assets/javascript.png";
 import network from "../assets/computer-networks.png";
@@ -14,8 +14,17 @@ const pr = ref();
 const commits = ref();
 const text = ref();
 
+const certif1 = ref();
+const certif2 = ref();
+const certif3 = ref();
+const certif4 = ref();
+
 const animations = [
   fade_up(text, 50),
+  fade_left(certif1, 100),
+  fade_left(certif2, 100),
+  fade_left(certif3, 100),
+  fade_left(certif4, 100),
   round_num(244)(contrib, 650),
   round_num(18)(pr, 700),
   round_num(150)(commits, 750),
@@ -75,6 +84,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
           >
           <div class="w-[40%] 2xl:w-full space-y-5">
             <div
+              ref="certif1"
               class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="cyber" alt="" width="50" />
@@ -84,6 +94,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
             </div>
             
             <div
+            ref="certif2"
               class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="dev" alt="" width="50" />
@@ -93,6 +104,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
           </div>
           <div class="w-[40%] 2xl:w-full space-y-5">
             <div
+            ref="certif3"
               class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="js" alt="" width="50" />
@@ -101,6 +113,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
               </p>
             </div>
             <div
+            ref="certif4"
               class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="network" alt="" width="50" />
