@@ -1,18 +1,22 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { fade_down, fade_right, fade_up } from '../core/animations';
+import { fade_down, fade_right, fade_up, fade_left } from '../core/animations';
 import diplome from '../assets/certificat.png';
 import progress from '../assets/progress.png';
 import learning from '../assets/learning.png';
 
-const text = ref()
+const text1 = ref()
+const text2 = ref()
+const text3 = ref()
 const title = ref()
 const box1 = ref()
 const box2 = ref()
 const box3 = ref()
 
 const animations = [
-    fade_right(text, 300),
+    fade_right(text1, 300),
+    fade_left(text2, 300),
+    fade_right(text3, 300),
     fade_down(title, 400),
     fade_up(box1, 450),
     fade_up(box2, 500),
@@ -30,25 +34,41 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
         class="w-full bg-gradient-to-b from-slate-800 to-neutral-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover lg:h-screen flex flex-col md:justify-center md:h-fit lg:h-full">
         <div class="h-full bg-gradient-to-b from-slate-800 to-neutral-900 clip-2">
             <section class="h-full py-10 text-neutral-800 relative space-y-10">
-                <div class="flex flex-col md:flex-row">
-                    <div class="w-[60%] h-[50%] flex items-center justify-center">
-                        <p ref="text" class="font-mpro text-left leading-8 w-[60%] text-neutral-200 text-xl border-l p-5 md:max-2xl:w-[80%]">
-                            As a student of informatic development, I have a strong foundation in programming and
+                <div class="flex flex-col lg:flex-row justify-center items-center space-y-10">
+                    <h2 ref="title" class="lg:hidden mt-5 w-[90%] lg:w-[50%] lg:w-[30%] h-fit text-7xl bg-slate-200 p-2 m-5 rounded font-title">
+                        Making Websites, API's & open source solutions
+                    </h2>
+                    <div class="w-full lg:w-[60%] h-[50%] flex items-center justify-center">
+                        <div class="font-mpro text-left leading-8 w-[60%] text-neutral-200 text-4xl lg:text-xl md:max-2xl:w-[80%] space-y-10">
+                            <p 
+                            ref="text1"
+                            class="border-l-2 p-5 bd-gradient-l p-5">
+                                As a student of informatic development, I have a strong foundation in programming and
                             software engineering. I have experience building APIs, websites, and working on open-source
                             projects, which has allowed me to develop a diverse set of skills and a deep understanding
-                            of various technologies. My projects have been well-received and have demonstrated my
+                            of various technologies.
+                            </p>
+                            <p 
+                            ref="text2"
+                            class="bg-gradient p-5 rounded-xl">
+                                My projects have been well-received and have demonstrated my
                             ability to design and implement complex systems. I am passionate about technology and am
-                            constantly seeking new challenges to improve my skills and knowledge. I am confident that my
+                            constantly seeking new challenges to improve my skills and knowledge.
+                            </p>
+                            <p 
+                            ref="text3"
+                            class="border-l-2 p-5 bd-gradient-l p-5">
+                                I am confident that my
                             experience and skills make me a strong candidate for any development opportunity and I would
                             be excited to be a part of a team that values innovation and creativity.
-                        </p>
+                            </p>
+                        </div>
                     </div>
-                    <h2 ref="title" class="w-[50%] lg:w-[30%] h-fit text-7xl bg-slate-200 p-2 m-5 rounded font-title">
+                    <h2 ref="title" class="hidden lg:block w-[90%] lg:w-[50%] lg:w-[30%] h-fit text-7xl bg-slate-200 p-2 m-5 rounded font-title">
                         Making Websites, API's & open source solutions
                     </h2>
                 </div>
-
-                <div class="w-full flex justify-center text-neutral-800">
+                <div class="w-full flex justify-center text-neutral-800 pb-5">
                     <div ref="box1" class="bg-slate-200 w-72 m-5 rounded-md">
                         <p class="h-1 w-full bg-sky-500 rounded-t-md"></p>
                         <div class="pt-5 px-5 absolute">

@@ -27,11 +27,11 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 <template>
     <div id="portfolio" class="h-full w-full bg-gradient-to-b from-slate-800 to-neutral-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover text-neutral-200">
         <section class="h-36 w-full flex justify-center items-center font-orbitron">
-            <h1 class="mx-20 text-6xl">Personal Projects</h1>
+            <h1 class="mx-20 text-7xl">Personal Projects</h1>
         </section>
         <section class="w-full mt-5 flex justify-center items-center">
-            <div class="w-[60%] flex justify-center items-center space-x-5 text-center font-orbitron text-xl font-bold md:max-2xl:flex-col md:max-2xl:space-x-0 md:max-2xl:space-y-3">
-                <div class="h-full flex justify-center items-center flex-col space-y-5">
+            <div class="w-[90%] lg:w-[60%] flex justify-center items-center space-x-5 text-center font-orbitron text-xl font-bold md:max-2xl:flex-col md:max-2xl:space-x-0 md:max-2xl:space-y-3">
+                <div class="h-full flex justify-center items-center flex-col space-y-5 text-4xl lg:text-xl">
                     <div ref="box1" class="shadow-xl shadow-slate-800">                       
                         <a href="https://github.com/SohKey/poke-app-angular">
                             <p>Pokemon APP written in Angular</p>
@@ -45,7 +45,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                         </a>
                     </div>
                 </div>
-                <div class="h-full flex justify-center items-center flex-col space-y-5">
+                <div class="h-full flex justify-center items-center flex-col space-y-5 text-4xl lg:text-xl">
                     <div ref="box3" class="shadow-xl shadow-slate-800 space-y-3">
                         <a href="https://github.com/aresrpg">
                             <p>AresRPG, JavaScript minecraft server</p>
@@ -61,7 +61,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                 </div>
             </div>
         </section>
-        <section class="w-full flex justify-center items-center mt-10">
+        <section class="w-full flex justify-center items-center mt-10 text-4xl lg:text-xl font-mpro">
             <p class="bg-neutral-100 text-neutral-800 rounded w-fit p-2 my-5">You can check all my projects <a class="text-sky-700 font-bold" href="https://github.com/SohKey?tab=repositories">here</a> !</p>
         </section>
     </div>

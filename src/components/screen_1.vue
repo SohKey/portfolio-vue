@@ -36,13 +36,13 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
         </ul>
       </nav>
     </footer>
-    <div class="w-full h-full flex justify-center items-center space-x-10">
-      <section ref="profilePic" class="w-[30%] space-y-5 flex flex-col justify-center items-center">
-        <img class="w-[80%] rounded-full " :src="portrait" alt="">
+    <div class="w-full h-full flex flex-col lg:flex-row space-y-10 justify-center items-center space-x-10">
+      <section ref="profilePic" class="w-[40%] lg:w-[20%] space-y-5 flex flex-col justify-center items-center">
+        <img class="w-full rounded-full " :src="portrait" alt="">
       </section>
-      <section class="text-slate-200 w-full w-[40%]">
+      <section class="text-slate-200 w-full w-[50%]">
         <div class="flex flex-col">  
-          <v-typical :class="'text-7xl font-powerG mb-5'"
+          <v-typical :class="'text-8xl lg:text-7xl font-powerG mb-5'"
             :steps="['Hello !', 1000, `Hello, I'm Thomas !`, 4000]" :wrapper="'h1'"></v-typical>
           <v-typical class="text-xl text-slate-200 font-black font-mpro px-2 mt-5 rounded w-fit text-center"
             :steps="['>', 3000, '> JavaScript Fullstack developer', 1000, '> Feel free to contact me !', 1000]"

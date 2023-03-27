@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import { round_num, fade_up, fade_left } from "../core/animations";
+import { round_num, fade_right, fade_left, fade_up } from "../core/animations";
 import cyber from "../assets/hacking.png";
 import js from "../assets/javascript.png";
 import network from "../assets/computer-networks.png";
@@ -12,7 +12,10 @@ import contribIcon from "../assets/contrib.png";
 const contrib = ref();
 const pr = ref();
 const commits = ref();
-const text = ref();
+const title = ref();
+const text1 = ref();
+const text2 = ref();
+const text3 = ref();
 
 const certif1 = ref();
 const certif2 = ref();
@@ -20,11 +23,16 @@ const certif3 = ref();
 const certif4 = ref();
 
 const animations = [
-  fade_up(text, 50),
+  fade_up(title, 200),
+  fade_right(text1, 300),
+  fade_right(text2, 400),
+  fade_right(text3, 500),
+
   fade_left(certif1, 100),
-  fade_left(certif2, 100),
-  fade_left(certif3, 100),
-  fade_left(certif4, 100),
+  fade_left(certif2, 200),
+  fade_left(certif3, 300),
+  fade_left(certif4, 400),
+
   round_num(244)(contrib, 650),
   round_num(18)(pr, 700),
   round_num(150)(commits, 750),
@@ -39,34 +47,42 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
 <template>
   <div
     id="github"
-    class="w-full h-full initial 2xl:h-screen bg-gradient-to-b from-neutral-800 to-slate-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover"
+    class="w-full h-full initial bg-gradient-to-b from-neutral-800 to-slate-900 lg:bg-cyber bg-repeat-round bg-fixed bg-cover"
   >
     <div
-      class="w-full h-screen bg-gradient-to-b from-neutral-800 to-slate-900 clip-1 flex justify-center items-center"
+      class="w-full h-full bg-gradient-to-b from-neutral-800 to-slate-900 clip-1 flex justify-center items-center"
     >
-      <section class="h-full w-[80%] pt-20 pl-5 absolute">
+      <section class="h-full w-[80%] pt-20">
 
-        <div class="mt-20 w-full flex items-center 2xl:items-right flex-col 2xl:flex-row">
-          <div class="w-full z-10 flex flex-col justify-center items-center space-y-10">
-            <h1 class="text-6xl text-neutral-200 font-powerG w-fit">
-              GITHUB <span class="text-gradient">&</span> <br />
+        <div class="mt-20 w-full flex items-center flex-col 2xl:flex-row">
+          <div class="w-full z-10 flex flex-col justify-center items-center 2xl:items-start space-y-10 mb-20">
+            <h1 
+            ref="title"
+            class="text-6xl text-neutral-200 font-powerG w-fit">
+              GITHUB <span class="text-gradient">&</span> <br/>
               CERTIFICATIONS
             </h1>
             <div
               ref="text"
-              class="font-mpro text-left leading-8 text-3xl lg:text-xl text-neutral-100 w-[70%] space-y-5"
+              class="font-mpro text-left leading-8 text-4xl lg:text-xl text-neutral-100 w-[80%] lg:w-[70%] space-y-5"
             >
-              <p class="border-l-2 pl-5">
+              <p 
+              ref="text1"
+              class="border-l-2 pl-5">
                 I am a fullstack JavaScript developer with a wide range of
                 skills and experience, including expertise in Node.js, Vue.js,
                 Angular, Python, or Java.
               </p>
-              <p class="border-l-2 pl-5">
+              <p
+              ref="text2"
+              class="border-l-2 pl-5">
                 I invite you to visit my GitHub profile, where you will find a
                 variety of projects that demonstrate my abilities and showcase
                 my dedication to creating high-quality, innovative software.
               </p>
-              <p class="border-l-2 pl-5">
+              <p 
+              ref="text3"
+              class="border-l-2 pl-5">
                 Whether you're looking for inspiration for your own projects or
                 simply want to see what I'm capable of, my GitHub is the perfect
                 place to start.
@@ -95,7 +111,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
             
             <div
             ref="certif2"
-              class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
+              class="bg-gradient-to-br from-violet-600 to-red-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="dev" alt="" width="50" />
               <p class="text-slate-200 font-mpro text-2xl">DevNet Associate</p>
@@ -105,7 +121,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
           <div class="w-[40%] 2xl:w-full space-y-5">
             <div
             ref="certif3"
-              class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
+              class="bg-gradient-to-br from-blue-500 to-red-500 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="js" alt="" width="50" />
               <p class="text-slate-200 font-mpro text-2xl">
@@ -114,7 +130,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
             </div>
             <div
             ref="certif4"
-              class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
+              class="bg-gradient-to-br from-green-500 to-sky-700 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
             >
               <img :src="network" alt="" width="50" />
               <p class="text-slate-200 font-mpro text-2xl">
@@ -124,7 +140,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
           </div>
           </div>
         </div>
-        <div class="w-full flex justify-center items-center mt-20">
+        <div class="w-full h-full flex justify-center items-center mt-20 2xl:mt-10 mb-20">
 
           <div
           class="bg-slate-200 w-fit h-fit rounded-md text-neutral-800 text-xl flex p-5 font-orbitron space-x-2 flex flex-col justify-left items-center xl:flex-row"

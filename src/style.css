@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .clip-1 {
-    clip-path: polygon(0 5%,100% 0,100% 95%,0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 }
 
 .clip-2 {
-    clip-path: polygon(0 0,100% 5%,100% 100%,0 95%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
 }
 
 @font-face {
@@ -29,13 +29,24 @@
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(65deg, #1105c5, #f70299);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(65deg, #1105c5, #f70299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .bg-gradient {
     background: -webkit-linear-gradient(65deg, #1105c5, #f70299);
 }
 
-     
+.bd-gradient-r {
+    border-right: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #f70299, #1105c5) 1;
+}
+
+.bd-gradient-l {
+    border-left: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #1105c5, #f70299) 1;
+
+}
