@@ -7,7 +7,7 @@ import Scool from '../components/screen_5.vue'
 </script>
 <template>
     <div class="md:block sm:hidden">
-      <Home msg="Home" />
+      <Home msg="Home" /> 
       <About msg="About Me" />
       <Portfolio msg="Portfolio" /> 
       <Certifications msg="Certifications" />
