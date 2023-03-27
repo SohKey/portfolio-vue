@@ -49,7 +49,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
             :loop="Infinity" :wrapper="'p'"></v-typical>
 
         </div>
-        <img class="invert w-[70%]" width="500" :src="separator" alt="">
+        <img class="invert w-[80%] lg:w-[70%]" width="500" :src="separator" alt="">
 
       </section>
      
