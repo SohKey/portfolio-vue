@@ -33,6 +33,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
           <a href="#portfolio" class="cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
           <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
           <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifs</a>
+          <a href="mailto:thomas.rodriguez.pro38@gmail.com" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Get in Touch</a>
         </ul>
       </nav>
     </footer>
