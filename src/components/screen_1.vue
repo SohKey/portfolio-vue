@@ -26,10 +26,10 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 
 
 <template>
-  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 flex flex-col lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-[40vh] md:h-[50vh] lg:h-[80vh] xl:h-screen flex">
+  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 flex flex-col lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-full lg:h-[90vh] xl:h-screen flex">
     <footer ref="footer" class="flex justify-center items-center mt-5 text-slate-200 xl:absolute bottom-5 inset-x-0">
       <nav class="w-fit border lg:rounded-full">
-        <ul class="flex text-4xl xl:text-lg">
+        <ul class="flex text-4xl lg:text-lg xl:text-lg">
           <a href="#portfolio" class="cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
           <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
           <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifs</a>
