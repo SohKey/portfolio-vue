@@ -26,7 +26,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
 
 
 <template>
-  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 flex flex-col lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-full lg:h-[90vh] xl:h-screen flex">
+  <div class="bg-gradient-to-b from-neutral-900 to-slate-800 flex flex-col lg:bg-cyber bg-repeat-round bg-fixed bg-cover font-orbitron h-full lg:h-[90vh] xl:h-screen">
     <footer ref="footer" class="flex justify-center items-center mt-5 text-slate-200 xl:absolute bottom-5 inset-x-0">
       <nav class="w-fit border lg:rounded-full">
         <ul class="flex text-4xl lg:text-lg xl:text-lg">
