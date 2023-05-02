@@ -32,28 +32,28 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
         <section class="w-full mt-5 flex justify-center items-center">
             <div class="w-[90%] lg:w-[60%] flex justify-center items-center space-x-5 text-center font-orbitron text-xl font-bold md:max-2xl:flex-col md:max-2xl:space-x-0 md:max-2xl:space-y-3">
                 <div class="h-full flex justify-center items-center flex-col space-y-5 text-4xl lg:text-xl">
-                    <div ref="box1" class="shadow-xl shadow-slate-800">                       
-                        <a href="https://github.com/SohKey/poke-app-angular">
+                    <div ref="box1">                       
+                        <a href="https://github.com/SohKey/poke-app-angular" class="space-y-10">
                             <p>Pokemon APP written in Angular</p>
                             <img :src="pokeApp" alt="poke app">
                         </a>
                     </div>
-                    <div ref="box2" class="shadow-xl shadow-slate-800 space-y-3">
-                        <a href="https://github.com/SohKey/poke-api">
+                    <div ref="box2">
+                        <a href="https://github.com/SohKey/poke-api" class="space-y-10">
                             <p>Pokemon API & authentification in JavaScript</p>
                             <img :src="pokeApi" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="h-full flex justify-center items-center flex-col space-y-5 text-4xl lg:text-xl">
-                    <div ref="box3" class="shadow-xl shadow-slate-800 space-y-3">
-                        <a href="https://github.com/aresrpg">
+                    <div ref="box3">
+                        <a href="https://github.com/aresrpg" class="space-y-10">
                             <p>AresRPG, JavaScript minecraft server</p>
                             <img :src="aresrpg" alt="">
                         </a>
                     </div>
-                    <div ref="box4" class="shadow-xl shadow-slate-800 space-y-1">
-                        <a href="https://github.com/SohKey/Giveaway-BOT">
+                    <div ref="box4">
+                        <a href="https://github.com/SohKey/Giveaway-BOT" class="space-y-10">
                             <p>Python BOT finding NFT giveways</p>
                             <img :src="giveway" alt="">
                         </a>

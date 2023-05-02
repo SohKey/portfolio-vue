@@ -52,19 +52,20 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
     <div
       class="w-full h-full bg-gradient-to-b from-neutral-800 to-slate-900 clip-1 flex justify-center items-center"
     >
-      <section class="h-full w-[80%] pt-20">
+      <section class="h-full w-[90%] pt-20">
 
         <div class="mt-20 w-full flex items-center flex-col 2xl:flex-row">
           <div class="w-full z-10 flex flex-col justify-center items-center 2xl:items-start space-y-10 mb-20">
             <h1 
             ref="title"
-            class="text-6xl text-neutral-200 font-powerG w-fit">
+            class="w-full text-6xl text-neutral-200 font-powerG w-fit">
               GITHUB <span class="text-gradient">&</span> <br/>
               CERTIFICATIONS
             </h1>
-            <div
+            <div class="w-full">
+              <div
               ref="text"
-              class="font-mpro text-left leading-8 text-4xl lg:text-xl text-neutral-100 w-[80%] lg:w-[70%] space-y-5"
+              class="font-mpro text-left leading-8 text-4xl lg:text-xl text-neutral-100 w-full lg:w-[70%] space-y-5"
             >
               <p 
               ref="text1"
@@ -88,17 +89,20 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
                 place to start.
               </p>
             </div>
+            </div>
             
-            <a
+            <div class="w-full">
+              <a
               href="https://github.com/SohKey"
               class="text-2xl font-powerG text-gradient rounded-md w-fit transition-all hover:text-3xl"
               >VISIT MY GITHUB</a
             >
+            </div>
           </div>
           <div
             class="h-full w-full flex flex-wrap justify-center items-center space-x-5 2xl:space-x-0 2xl:space-y-5 2xl:flex-col 2xl:w-[50%] mt-10"
           >
-          <div class="w-[40%] 2xl:w-full space-y-5">
+          <div class="w-[48%] 2xl:w-full space-y-5">
             <div
               ref="certif1"
               class="bg-gradient-to-br from-red-500 to-sky-900 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
@@ -118,7 +122,7 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
             </div>
             
           </div>
-          <div class="w-[40%] 2xl:w-full space-y-5">
+          <div class="w-[48%] 2xl:w-full space-y-5">
             <div
             ref="certif3"
               class="bg-gradient-to-br from-blue-500 to-red-500 h-[10vh] w-full rounded-xl flex justify-left items-center space-x-2 px-5"
@@ -143,19 +147,19 @@ onUnmounted(() => animations.forEach((animation) => animation.unmount()));
         <div class="w-full h-full flex justify-center items-center mt-20 2xl:mt-10 mb-20">
 
           <div
-          class="bg-slate-200 w-fit h-fit rounded-md text-neutral-800 text-xl flex p-5 font-orbitron space-x-2 flex flex-col justify-left items-center xl:flex-row"
+          class="bg-slate-200 w-fit h-fit rounded-md text-neutral-800 text-xl lg:space-x-5 flex p-5 font-orbitron flex flex-col justify-start items-center xl:flex-row"
         >
-          <div class="flex items-center space-x-2">
+          <div class="w-full lg:w-fit flex justify-start items-center space-x-2">
             <img width="40" :src="contribIcon" alt="" />
             <span class="text-2xl font-bold" ref="contrib"></span>+
             <p>Contributions</p>
           </div>
-          <div class="flex items-center space-x-2">
+          <div class="w-full lg:w-fit flex justify-start items-center space-x-2">
             <img width="40" :src="prIcon" alt="" />
             <span class="text-2xl font-bold" ref="pr"></span>+
             <p>Pull Requests</p>
           </div>
-          <div class="flex items-center space-x-2">
+          <div class="w-full lg:w-fit flex justify-start items-center space-x-2">
             <img width="40" :src="commitIcon" alt="" />
             <span class="text-2xl font-bold" ref="commits"></span>+
             <p>Commits</p>

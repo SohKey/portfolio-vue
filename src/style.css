@@ -35,18 +35,22 @@
 }
 
 .bg-gradient {
-    background: -webkit-linear-gradient(65deg, #1105c5, #f70299);
+    background: -webkit-linear-gradient(65deg, #1f1f1f, #161515);
+    border: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #757575, #333333) 1;
+
 }
 
 .bd-gradient-r {
     border-right: 2px;
     border-style: solid;
-    border-image: linear-gradient(to bottom, #f70299, #1105c5) 1;
+    border-image: linear-gradient(to bottom, #8f8e8e, #333333) 1;
 }
 
 .bd-gradient-l {
     border-left: 2px;
     border-style: solid;
-    border-image: linear-gradient(to bottom, #1105c5, #f70299) 1;
+    border-image: linear-gradient(to bottom, #8f8e8e, #333333) 1;
 
 }
