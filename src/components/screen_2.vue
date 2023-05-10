@@ -70,7 +70,7 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
                         <div ref="box1" class="bg-slate-200 w-full m-5 rounded-md">
                             <p class="h-1 w-full bg-sky-500 rounded-t-md"></p>
                             <div class="p-10 flex lg:flex-col space-x-20 lg:space-x-0 justify-center items-center">
-                                <h4 class="text-3xl">Scientific <br>baccalauréat</h4>
+                                <h4 class="text-3xl lg:w-full">Scientific <br>baccalauréat</h4>
                                 <div class="flex justify-start items-center space-x-5">
                                     <span>Pierre du terrail <br> high school (France)</span>
                                     <img :src="diplome" class="h-28 rounded" alt="diplome">
