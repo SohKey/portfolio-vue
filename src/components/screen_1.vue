@@ -62,10 +62,10 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
     <footer ref="footer" class="hidden lg:flex justify-center items-center mt-5 text-slate-200 pb-10">
       <nav class="w-fit lg:border lg:rounded-full">
         <ul class="flex text-4xl lg:text-lg xl:text-lg">
-          <a href="#portfolio" class="ml-10 cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round">My portfolio</a>
-          <a href="#about" class="cursor-pointer p-5 bg-repeat-round">About me</a>
-          <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Github & Certifications</a>
-          <a href="mailto:thomas.rodriguez.pro38@gmail.com" class="cursor-pointer p-5 rounded-r-full bg-repeat-round">Get in Touch</a>
+          <a href="#portfolio" class="ml-10 cursor-pointer p-5 rounded-l-full bg-left-top bg-repeat-round hover:text-gray-400">My portfolio</a>
+          <a href="#about" class="cursor-pointer p-5 bg-repeat-round hover:text-gray-400">About me</a>
+          <a href="#github" class="cursor-pointer p-5 rounded-r-full bg-repeat-round hover:text-gray-400">Github & Certifications</a>
+          <a href="mailto:thomas.rodriguez.pro38@gmail.com" class="cursor-pointer p-5 rounded-r-full bg-repeat-round hover:text-gray-400">Get in Touch</a>
         </ul>
       </nav>
     </footer>
