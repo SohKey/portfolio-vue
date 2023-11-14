@@ -65,7 +65,6 @@ function init() {
 	renderer.setClearColor(bgColor, 1);
 	renderer.shadowMap.enabled = true;
 	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-	renderer.outputEncoding = THREE.sRGBEncoding;
 	container.appendChild(renderer.domElement);
 
 	// scene setup
@@ -176,7 +175,7 @@ function loadColliderEnvironment() {
 		prod: '../models/dungeon_low_poly_game_level_challenge/scene.gltf',
 		dev: '/src/models/dungeon_low_poly_game_level_challenge/scene.gltf'
 	}
-	new GLTFLoader().load(textures.prod, res => {
+	new GLTFLoader().load(textures.dev, res => {
 
 		const gltfScene = res.scene;
 		gltfScene.scale.setScalar(.01);
@@ -242,7 +241,7 @@ function loadColliderEnvironment() {
 
 			if (visualGeometries.length) {
 
-				const newGeom = BufferGeometryUtils.mergeBufferGeometries(visualGeometries);
+				const newGeom = BufferGeometryUtils.mergeGeometries(visualGeometries);
 				const newMesh = new THREE.Mesh(newGeom, new THREE.MeshStandardMaterial({ color: parseInt(hex), shadowSide: 2 }));
 				newMesh.castShadow = true;
 				newMesh.receiveShadow = true;
