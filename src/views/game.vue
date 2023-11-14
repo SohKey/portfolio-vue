@@ -171,7 +171,7 @@ function init() {
 }
 
 function loadColliderEnvironment() {
-	const texture = '/models/dungeon_low_poly_game_level_challenge/scene.gltf'
+	const texture = '/public/models/dungeon_low_poly_game_level_challenge/scene.gltf'
 	new GLTFLoader().load(texture, (res) => {
 
 		const gltfScene = res.scene;
