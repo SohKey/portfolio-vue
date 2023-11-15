@@ -3,6 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue';
 import { fade_up } from '../core/animations';
 import portrait from '../assets/portrait.png'
 import separator from '../assets/separator.png'
+import VTypical from 'vue-typical';
 
 const profilePic = ref()
 const footer = ref()
@@ -45,11 +46,11 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
       </section>
       <section class="text-slate-200 w-full w-[50%]">
         <div class="flex flex-col">  
-          <v-typical :class="'text-8xl lg:text-7xl font-powerG mb-5'"
-            :steps="['Hello !', 1000, `Hello, I'm Thomas !`, 4000]" :wrapper="'h1'"></v-typical>
-          <v-typical class="hidden lg:flex text-3xl lg:text-xl text-slate-200 font-black font-mpro px-2 mt-5 rounded w-fit text-center"
+          <VTypical :class="'text-8xl lg:text-7xl font-powerG mb-5'"
+            :steps="['Hello !', 1000, `Hello, I'm Thomas !`, 4000]" :wrapper="'h1'"></VTypical>
+          <VTypical class="hidden lg:flex text-3xl lg:text-xl text-slate-200 font-black font-mpro px-2 mt-5 rounded w-fit text-center"
             :steps="['>', 3000, '> JavaScript Fullstack developer', 1000, '> Feel free to contact me !', 1000]"
-            :loop="Infinity" :wrapper="'p'"></v-typical>
+            :loop="Infinity" :wrapper="'p'"></VTypical>
 
         </div>
         <div class="flex justify-center lg:justify-start items-center">
@@ -71,16 +72,3 @@ onUnmounted(() => animations.forEach(animation => animation.unmount()))
     </footer>
   </div>
 </template>
-
-<script>
-import VTypical from 'vue-typical';
-
-export default {
-  methods: {
-
-  },
-  components: {
-    VTypical,
-  },
-}
-</script>

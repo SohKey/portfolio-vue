@@ -9,7 +9,8 @@
 			<a class="absolute right-0 mx-5 text-white cursor-pointer hover:text-gray-500" v-on:click="go('/')">End</a>
 		</nav>
 		<div class="w-full h-screen flex justify-center items-center text-white text-6xl" id="waitingscreen">
-			<p>Texture loading...</p>
+			<VTypical :class="'text-8xl lg:text-7xl font-mpro mb-5'"
+            :steps="['Loading', 100, `Loading.`, 250, `Loading..`, 500, `Loading...`, 750]" :loop="Infinity" :wrapper="'h1'"></VTypical>
 		</div>
 		<div id="container"></div>
 	</section>
@@ -23,6 +24,7 @@ import * as BufferGeometryUtils from 'three/examples/jsm/utils/BufferGeometryUti
 import { MeshBVH, MeshBVHVisualizer, StaticGeometryGenerator } from 'three-mesh-bvh';
 import { onMounted } from "vue";
 import router from '../router';
+import VTypical from 'vue-typical';
 
 const go = (to) => {
 	router.push(to)
@@ -60,7 +62,7 @@ onMounted(() => {
 
 function init() {
 	const container = document.getElementById('container');
-	container.toggleAttribute("disabled")
+	container.toggleAttribute("hidden")
 
 	const bgColor = 0x263238 / 2;
 	// renderer setup
@@ -182,7 +184,7 @@ function loadColliderEnvironment() {
 	const texture = '/models/dungeon_low_poly_game_level_challenge/scene.gltf'
 	new GLTFLoader().load(texture, (res) => {
 		textureLoading.remove();
-		container.removeAttribute("disabled")
+		container.removeAttribute("hidden")
 
 		const gltfScene = res.scene;
 		gltfScene.scale.setScalar(.01);
