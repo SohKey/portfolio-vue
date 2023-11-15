@@ -8,6 +8,9 @@
 			<p class="absolute inset-10 text-white text-center text-sm">change perspective with ctrl+v</p>
 			<a class="absolute right-0 mx-5 text-white cursor-pointer hover:text-gray-500" v-on:click="go('/')">End</a>
 		</nav>
+		<div class="w-full h-screen flex justify-center items-center text-white text-6xl" id="waitingscreen">
+			<p>Texture loading...</p>
+		</div>
 		<div id="container"></div>
 	</section>
 </template>
@@ -49,15 +52,17 @@ let tempBox = new THREE.Box3();
 let tempMat = new THREE.Matrix4();
 let tempSegment = new THREE.Line3();
 
+
 onMounted(() => {
 	init();
 	render();
 })
 
 function init() {
+	const container = document.getElementById('container');
+	container.toggleAttribute("disabled")
 
 	const bgColor = 0x263238 / 2;
-	const container = document.getElementById('container');
 	// renderer setup
 	renderer = new THREE.WebGLRenderer({ antialias: true });
 	renderer.setPixelRatio(window.devicePixelRatio);
@@ -171,8 +176,13 @@ function init() {
 }
 
 function loadColliderEnvironment() {
+	const textureLoading = document.getElementById('waitingscreen');
+	const container = document.getElementById('container');
+
 	const texture = '/models/dungeon_low_poly_game_level_challenge/scene.gltf'
 	new GLTFLoader().load(texture, (res) => {
+		textureLoading.remove();
+		container.removeAttribute("disabled")
 
 		const gltfScene = res.scene;
 		gltfScene.scale.setScalar(.01);
@@ -265,9 +275,7 @@ function loadColliderEnvironment() {
 		scene.add(visualizer);
 		scene.add(collider);
 		scene.add(environment);
-
-	});
-
+	})
 }
 
 function reset() {
